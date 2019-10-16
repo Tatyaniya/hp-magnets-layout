@@ -1,0 +1,134 @@
+.header {
+    width: 100%;
+    min-height: 100px;
+    background: #0154a4;
+    position: relative;
+    z-index: 3;
+}
+
+.header__content {
+    position: relative;
+    min-height: 100px;
+}
+
+.logo {
+    width: 120px;
+    height: 80px;
+    transition: transform .5s;
+    -webkit-transition: transform .5s;
+    -moz-transition: transform .5s;
+    -ms-transition: transform .5s;
+    -o-transition: transform .5s;
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    margin-left: -60px;
+    z-index: 4;
+}
+
+.logo:hover {
+    transform: scale(1.08);
+    -webkit-transform: scale(1.08);
+    -moz-transform: scale(1.08);
+    -ms-transform: scale(1.08);
+    -o-transform: scale(1.08);
+}
+
+.topMenu {
+    padding: 0 20px;
+    .sm(display, none);
+
+    &__list{
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        width: 20%;
+        height: 100px;
+        padding: 34px 2% 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    &__item--before:before {
+        width: 2px;
+        height: 20px;
+        content: "";
+        display: block;
+        position: absolute;
+        left: -1px;
+        top: 45px;
+        background: #fff;
+        transition: opacity 0.3s;
+    }
+
+    &__link {
+        font-size: 20px;
+        color: #fff;
+        text-align: center;
+    }
+}
+
+.topMenu__item:hover {
+    background: #0b4d91;
+}
+
+.topMenu__item:hover+.topMenu__item--before:before,
+.topMenu__item:hover::before {
+    opacity: 0;
+}
+
+.humburger {
+    display: none;
+    width: 80px;
+    height: 80px;
+    margin: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 49%;
+    right: 5px;
+    transform: translate(0, -50%);
+    .sm(display, block);
+}
+
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.hamRotate.active {
+    transform: rotate(45deg);
+}
+.line {
+    fill:none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke:#fff;
+    stroke-width:5.5;
+    stroke-linecap:round;
+}
+.ham7 .top {
+    stroke-dasharray: 40 82;
+}
+.ham7 .middle {
+stroke-dasharray: 40 111;
+}
+.ham7 .bottom {
+stroke-dasharray: 40 161;
+}
+.ham7.active .top {
+stroke-dasharray: 17 82;
+stroke-dashoffset: -62px;
+}
+.ham7.active .middle {
+stroke-dashoffset: 23px;
+}
+.ham7.active .bottom {
+stroke-dashoffset: -83px;
+}

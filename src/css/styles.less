@@ -1,0 +1,112 @@
+@import "smart-grid.less";
+
+.reset();
+
+h1, h2, h3, h4, h5, h6,
+p, ul, li {
+    padding: 0;
+    margin: 0;
+}
+
+/*
+.debugGrid{
+	.debug(rgba(0, 0, 0, 0.3), 1px #ff0 solid);
+}*/
+
+@font-face {
+    font-family: 'Muller';
+    src: url('../fonts/MullerMedium.woff2') format('woff2'),
+        url('../fonts/MullerMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('../fonts/MullerExtraBold.woff2') format('woff2'),
+        url('../fonts/MullerExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('../fonts/MullerRegular.woff2') format('woff2'),
+        url('../fonts/MullerRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('../fonts/MullerBold.woff2') format('woff2'),
+        url('../fonts/MullerBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Appetite';
+    src: url('../fonts/Appetite.eot');
+    src: url('../fonts/Appetite.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Appetite.woff2') format('woff2'),
+        url('../fonts/Appetite.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Appetite';
+    src: url('../fonts/Appetite-Italic.eot');
+    src: url('../fonts/Appetite-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Appetite-Italic.woff2') format('woff2'),
+        url('../fonts/Appetite-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muller', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #0a4486;
+    background: #fff;
+}
+
+.container{
+	.wrapper();
+}
+
+.sg-row {
+    .row-flex();
+}
+
+.sg-col {
+    .col();
+}
+
+img {
+    display: block;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+
+
+@import "sections/header.less";
+@import "sections/magnets.less";
+//@import "sections/win.less";
+//@import "sections/prize.less";
+@import "sections/footer.less";

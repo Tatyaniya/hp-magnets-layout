@@ -1,0 +1,61 @@
+.footer {
+    background: #0d54a6;
+    color: #fff;
+    font-size: 18px;
+    font-weight: normal;
+    padding-top: 55px;
+    padding-bottom: 60px;
+    .xs(font-size, 13px);
+
+    &__box {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .md-block({
+            flex-direction: column;
+        });
+    }
+}
+
+.hochland {
+    display: flex;
+    .md(margin-bottom, 30px);
+
+    &__year {
+        padding: 0 14px;
+        border-right: 1px solid #fff;
+        margin-right: 14px;
+    }
+}
+
+.social {
+    display: flex;
+    .md(margin-bottom, 30px);
+
+    &__item {
+        width: 33px;
+        height: 33px;
+        margin-right: 17px;
+        transition: all 0.3s ease;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover {
+            transform: scale(1.15);
+        }
+    }
+}
+
+.corporate {
+    display: flex;
+    align-items: center;
+
+    &__icon {
+        width: 33px;
+        height: 33px;
+        margin-right: 40px;
+        .md(display, none);
+    }
+}
