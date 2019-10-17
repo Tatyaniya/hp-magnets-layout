@@ -15,4 +15,50 @@
         text-align: center;
         margin-left: 296px;
     }
+
+    &-priz {
+        width: 1045px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    &-100r {
+        width: 265px;
+        position: absolute;
+        top: 64px;
+        left: 1170px;
+    }
+}
+
+.magMenu__list {
+    width: 520px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    .sm(display, none);
+}
+
+.magMenu__item {
+    width: 33.33%;
+    height: 80px;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .md(font-size, 15px);
+}
+
+.magMenu__link {
+    color: #0a4486;
+}
+
+.magMenu__item--active {
+    background: #ed1c24;
+}
+
+.magMenu__item--active .magMenu__link {
+    color: #fff;
 }

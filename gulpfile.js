@@ -26,6 +26,13 @@ function html(){
 				.pipe(gulpIf(isSync, browserSync.stream()));
 }
 
+function txt(){
+	return gulp.src('./src/**/*.txt')
+				// silense
+				.pipe(gulp.dest('./build'))
+				.pipe(gulpIf(isSync, browserSync.stream()));
+}
+
 function styles(){
 	return gulp.src('./src/css/styles.less')
 				.pipe(gulpIf(isMap, sourcemaps.init()))
@@ -67,6 +74,7 @@ function watch(){
 
 	gulp.watch('./src/css/**/*.less', styles);
     gulp.watch('./src/**/*.html', html);
+    gulp.watch('./src/**/*.txt', txt);
     gulp.watch('./src/**/*.js', scripts);
 	gulp.watch('./smartgrid.js', grid);
 }
@@ -78,7 +86,7 @@ function grid(done){
 	done();
 }
 
-let build = gulp.parallel(html, styles, images, fonts, scripts);
+let build = gulp.parallel(html, styles, images, fonts, scripts, txt);
 let buildWithClean = gulp.series(clean, build);
 let dev = gulp.series(buildWithClean, watch);
 
