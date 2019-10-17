@@ -1,14 +1,182 @@
 .magMain {
     background: url('../img/blue-bg.jpg') no-repeat center center;
     background-size: cover;
+    padding-top: 25px;
+    color: #fff;
 }
 
 .aboutAction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     &__item {
+        font-size: 29px;
         text-align: center;
+        margin-bottom: 45px;
+        position: relative;
+
+        &:last-child {
+            margin-bottom: 10px;
+        }
+
+        &--1 {
+            width: 470px;
+
+            &:before {
+                &:extend(.aboutAction-pseudo);
+                width: 510px;
+                height: 450px;
+                background-image: url('../img/tvorozh_1.png');
+                top: 20px;
+                left: -630px;
+            }
+
+            &:after {
+                &:extend(.aboutAction-pseudo);
+                width: 224px;
+                height: 131px;
+                background-image: url('../img/strelka_1.png');
+                top: 210px;
+                left: -237px;
+            }
+        }
+
+        &--2 {
+            width: 400px;
+
+            &:before {
+                &:extend(.aboutAction-pseudo);
+                width: 142px;
+                height: 109px;
+                background-image: url('../img/strelka_2.png');
+                top: 190px;
+                right: -148px;
+            }
+
+            &:after {
+                &:extend(.aboutAction-pseudo);
+                width: 673px;
+                height: 526px;
+                background-image: url('../img/magnits_1.png');
+                top: -200px;
+                right: -740px;
+            }
+    
+        }
+
+        &--3 {
+            width: 610px;
+
+            &:before {
+                &:extend(.aboutAction-pseudo);
+                width: 464px;
+                height: 439px;
+                background-image: url('../img/kamera_1.png');
+                top: 20px;
+                left: -562px;
+            }
+
+            &:after {
+                &:extend(.aboutAction-pseudo);
+                width: 110px;
+                height: 125px;
+                background-image: url('../img/strelka_3.png');
+                top: 195px;
+                left: -135px;
+            }
+        }
+
+        &--4 {
+            width: 318px;
+
+            &:before {
+                &:extend(.aboutAction-pseudo);
+                width: 113px;
+                height: 195px;
+                background-image: url('../img/strelka_4.png');
+                top: 84px;
+                right: -148px;
+            }
+
+            &:after {
+                &:extend(.aboutAction-pseudo);
+                width: 535px;
+                height: 502px;
+                background-image: url('../img/internet_1.png');
+                top: -14px;
+                right: -688px;
+            }
+        }
+
+        &--5 {
+            width: 345px;
+
+            &:before {
+                &:extend(.aboutAction-pseudo);
+                width: 534px;
+                height: 312px;
+                background-image: url('../img/rubli_1.png');
+                top: 5px;
+                left: -680px;
+            }
+
+            &:after {
+                &:extend(.aboutAction-pseudo);
+                width: 160px;
+                height: 121px;
+                background-image: url('../img/strelka_5.png');
+                top: 59px;
+                left: -179px;
+            }
+        }
+        
+    }
+
+    &__num {
+        font-family: 'Appetite', sans-serif;
+        font-size: 137px;
+        font-weight: 400;
+        line-height: 0.9;
+    }
+
+    &__subtitle {
+        font-family: 'Arial', sans-serif;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        font-family: 'Arial Narrow', sans-serif;
+        font-weight: 300;
     }
 
     &__icons {
+        width: 255px;
         margin: 0 auto;
+    }
+}
+
+.aboutAction-pseudo {
+    display: block;
+    content: "";
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.prizes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 21px;
+
+    &__text {
+        font-family: 'Arial Narrow', sans-serif;
+        font-size: 32px;
+        font-weight: 300;
+        letter-spacing: -0.04em;
+        padding-right: 70px;
     }
 }
