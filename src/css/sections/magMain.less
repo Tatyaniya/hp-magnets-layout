@@ -3,17 +3,14 @@
     background-size: cover;
     padding-top: 25px;
     color: #fff;
-
-    .xs-block({
-        padding-left: 15px;
-        padding-right: 15px;
-    });
 }
 
 .aboutAction {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
 
     &__item {
         font-size: 29px;
@@ -232,6 +229,10 @@
                 width: 100%;
             });
 
+            .xxs-block({
+                padding-bottom: 430px;
+            });
+
             &:before {
                 &:extend(.aboutAction-pseudo);
                 width: 113px;
@@ -280,6 +281,10 @@
 
             .xs-block({
                 width: 100%;
+            });
+
+            .xxs-block({
+                padding-bottom: 240px;
             });
 
             &:before {
@@ -368,11 +373,55 @@
     align-items: center;
     padding-bottom: 21px;
 
+    &__img {
+        margin-bottom: 5px;
+        @media screen and (max-width: 600px) {
+            display: none;
+        } 
+    }
+
     &__text {
         font-family: 'Arial Narrow', sans-serif;
         font-size: 32px;
         font-weight: 300;
         letter-spacing: -0.04em;
         padding-right: 70px;
+        padding-left: 15px;
+
+        @media screen and (max-width: 1400px) {
+            font-size: 27px;
+            padding-right: 15px;
+            letter-spacing: 0;
+        }
+
+        .bmd-block({
+            font-size: 20px;
+        });
+
+        .md-block({
+            font-size: 18px;
+        });
+
+        .sm-block({
+            font-size: 16px;
+        });
+    }
+
+    &__mob1 {
+        display: none;
+
+        @media screen and (max-width: 600px) {
+            display: block;
+            margin-bottom: 17px;
+        }
+    }
+
+    &__mob2 {
+        display: none;
+
+        @media screen and (max-width: 600px) {
+            display: block;
+            margin-bottom: 16px;
+        }
     }
 }
