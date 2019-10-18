@@ -21,7 +21,7 @@ module.exports = {
             width: "576px",
         },
         xxs: {
-            width: "400px"
+            width: "404px"
         }
 	},
 	mobileFirst: false
