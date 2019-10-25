@@ -3,93 +3,61 @@
 }
 
 .magnets {
-    padding-top: 479px;
-    padding-bottom: 477px;
-    background: url('../img/fon_1.jpg') no-repeat center center;
+    padding-top: 230px;
+    padding-bottom: 422px;
+    background: url('../img/first-bg.jpg') no-repeat center center;
     background-size: cover;
     position: relative;
 
-    .bmd-block({
-        padding-top: 355px;
-        padding-bottom: 382px;
-    });
+    @media screen and (max-width: 1700px) {
+        padding-top: 245px;
+        padding-bottom: 390px;
+    }
 
     .sm-block({
         background-image: url('../img/fon_2.jpg');
-        padding-top: 270px;
+        padding-top: 230px;
         padding-bottom: 320px;
     });
 
     .xs-block({
-        padding-top: 270px;
-        padding-bottom: 300px;
+        padding-top: 200px;
+        padding-bottom: 290px;
     });
 
     &__title {
-        width: 632px;
         font-family: 'Appetite', sans-serif;
-        font-size: 42px;
+        font-size: 36px;
         font-weight: 400;
         color: #d01117;
         text-transform: uppercase;
         text-align: center;
-        margin-left: 296px;
 
-        @media screen and (max-width: 1530px) {
-            margin-left: 80px;
-            text-align-last: left;
-        }
-
-        .sm-block({
-            width: 210px;
-            font-size: 24px;
-            margin-left: 4.6vw;
+        .xs-block({
+            font-size: 30px;
         });
     }
 
     &-priz {
-        width: 1045px;
+        width: 690px;
         position: absolute;
-        top: 60px;
-        left: 0;
+        top: 15px;
+        left: 15.3vw;
 
-        @media screen and (max-width: 1530px) {
-            width: 68vw;
+        @media screen and (max-width: 1700px) {
+            width: 660px;
         }
 
-        .bmd(width, 63vw);
-
-        .sm-block({
-            width: 450px;
-            top: 16px;
+        .md-block({
             left: 50%;
             transform: translate(-50%);
         });
 
-        .xs(width, 310px);
-    }
-
-    &-100r {
-        width: 265px;
-        position: absolute;
-        top: 64px;
-        left: 1170px;
-
-        @media screen and (max-width: 1530px) {
-            width: 200px;
-            left: 75vw;
-        }
-
-        .bmd(width, 140px);
-
-        .sm-block({
-            top: 190px;
-            left: 54vw;
-        });
+        .sm(width, 490px);
 
         .xs-block({
-            top: 145px;
-            left: 45vw;
+            width: 310px;
+            top: 30px;
         });
     }
 }
